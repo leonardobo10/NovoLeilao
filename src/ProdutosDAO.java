@@ -35,12 +35,13 @@ public class ProdutosDAO {
             ps.setInt(2, produto.getValor());
             ps.setString(3, produto.getStatus());
             ps.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Produto cadastrado com sucesso");
             conn.close();
             ps.close();
             
         }
         catch(SQLException ex) {
-            JOptionPane.showMessageDialog(null,"");
+            JOptionPane.showMessageDialog(null,"Erro ao cadastrar");
         }
         
      
